@@ -39,7 +39,7 @@ bool is_i2c_sda(uint8_t gpio)
  * @brief       Get gpio pin i2c type.
  *
  * @param gpio  gpio pin.
- * @return      is sda compatible.
+ * @return      is scl compatible.
  */
 bool is_i2c_scl(uint8_t gpio)
 {
