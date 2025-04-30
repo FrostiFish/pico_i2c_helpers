@@ -19,6 +19,10 @@
 // Functions
 
 void i2c_set_gpio(uint8_t sda, uint8_t scl);
+bool is_i2c_sda(uint8_t gpio);
+bool is_i2c_scl(uint8_t gpio);
+i2c_inst_t* get_i2c_inst(uint8_t gpio);
 uint8_t get_i2c_num(uint8_t gpio);
+
 
 #endif

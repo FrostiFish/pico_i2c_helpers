@@ -24,25 +24,26 @@
     gpio_pull_up(scl);
  }
 
- /**
- * @brief i2c pin types.
+/**
+ * @brief       Get gpio pin i2c type.
+ *
+ * @param gpio  gpio pin.
+ * @return      is sda compatible.
  */
-typedef enum {
-    CLOCK,
-    DATA
-} gpio_i2c_t;
+bool is_i2c_sda(uint8_t gpio)
+{
+    return !(gpio%2);
+}
 
 /**
  * @brief       Get gpio pin i2c type.
  *
  * @param gpio  gpio pin.
- * @return      i2c pin type.
+ * @return      is sda compatible.
  */
-gpio_i2c_t get_gpio_i2c_type(uint8_t gpio)
+bool is_i2c_scl(uint8_t gpio)
 {
-    if (gpio % 2)
-        return CLOCK;
-    return DATA;
+    return gpio%2;
 }
 
 /**
